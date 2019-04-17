@@ -16,27 +16,25 @@ database=firebase.firestore();
 // Initialize Firebase
 function credentialchecker() {
 
-
-
-
     database.collection("users").get().then(function(usersSnapshot) {
 
-        var arr = [[usersSnapshot.size],2];
+        var arr = [[],[]];
 
         var length=0;
      //   var BreakException = {};
     //     try {
              usersSnapshot.forEach(function (user) {
-
                  // doc.data() is never undefined for query doc snapshots
                  // console.log(user.id, " => ", user.data());
                  var usr = user.data().username;
                  var passw = user.data().password;
+                 arr[length][0] = usr;
+                 arr[length][1] = passw;
                  console.log(usr);
                  console.log(passw);
                  console.log(length);
-                 arr[length][0] = usr;
-                 arr[length][1] = passw;
+                 console.log(arr[length][0]);
+                 console.log(arr[length][1]);
                  length++;
              });
 
@@ -63,9 +61,9 @@ function credentialchecker() {
                 window.location.href = "https://docs.google.com/document/d/1IVa_auUn0vAn8BSRM0xh--tZRXdsgtGUdF0Een7vBNM/edit";
                 break;
             }
-            else
+            else if(i==length-1)
                 alert("NOT A GTA!!");
-                 break;
+
         }
 
     });
