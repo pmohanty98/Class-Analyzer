@@ -33,8 +33,7 @@
         stucount++;
 
     });
-     var average=(averagesum)/(stucount*200);
-     average=50;
+     var average=(averagesum)/(stucount*2);
         console.log(averagesum);
         console.log(average);
         StudentSnapshot.forEach(function (Student) {
@@ -58,7 +57,7 @@
                 axisY: {
                     title: "Grades",
                     showInLegend: true,
-                    valueFormatString: "#0,,.",
+                   // valueFormatString: "#0,,.",
                     stripLines: [{
                         color:"red",
                         value: average,
@@ -66,15 +65,14 @@
                     }]
                 },
                 data: [{
-                    yValueFormatString: "##.00",
+                    yValueFormatString: "##",
                     showInLegend: true,
-
                     xValueFormatString: "string",
                     name: stuname,
                     type: "spline",
                     dataPoints: [
-                        {x: "Midterm 1", y: midterm},
-                        {x: "Final", y: final},
+                        {y: midterm},
+                        {y: final},
 
                     ]
                 }]

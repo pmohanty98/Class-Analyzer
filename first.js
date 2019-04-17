@@ -16,19 +16,25 @@ database=firebase.firestore();
 // Initialize Firebase
 function credentialchecker() {
 
-    var arr = [[],2];
-    var length=0;
+
+
 
     database.collection("users").get().then(function(usersSnapshot) {
+
+        var arr = [[usersSnapshot.size],2];
+
+        var length=0;
      //   var BreakException = {};
     //     try {
              usersSnapshot.forEach(function (user) {
+
                  // doc.data() is never undefined for query doc snapshots
                  // console.log(user.id, " => ", user.data());
                  var usr = user.data().username;
                  var passw = user.data().password;
                  console.log(usr);
                  console.log(passw);
+                 console.log(length);
                  arr[length][0] = usr;
                  arr[length][1] = passw;
                  length++;
@@ -37,9 +43,16 @@ function credentialchecker() {
 
                  var cname = document.getElementById("gta_name").value;
                  var sname = document.getElementById("pass").value;
-
+         console.log("input");
         console.log(cname);
         console.log(sname);
+
+
+        console.log("array entries");
+        console.log(arr[0][0]);
+        console.log(arr[0][1]);
+        console.log(arr[1][0]);
+        console.log(arr[1][1]);
 
 
         for(var i=0;i<length;i++)
