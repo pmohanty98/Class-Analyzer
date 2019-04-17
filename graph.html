@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<title>ClassAnalyzer</title>
+<head>
+    <script language="javascript" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script>
+    var config = {
+    apiKey: "AIzaSyBh0U1gENXIsEjB-gnJgjabaVxBSrFa7Qs",
+    authDomain: "database-3d971.firebaseapp.com",
+    databaseURL: "https://database-3d971.firebaseio.com",
+    projectId: "database-3d971",
+    storageBucket: "database-3d971.appspot.com",
+    messagingSenderId: "223031201948"
+    };
+
+    firebase.initializeApp(config);
+    database=firebase.firestore();
+
+    </script>
+
+    <script>
+    database.collection("Student").get().then(function(StudentSnapshot) {
+
+        var averagesum=0;
+        var stucount=0;
+
+    StudentSnapshot.forEach(function (Student) {
+        averagesum= averagesum +Student.data().Midterm1 + Student.data().Final ;
+        console.log(averagesum);
+        console.log(Student.data().Midterm1);
+        console.log(Student.data().Final);
+        stucount++;
+
+    });
+     var average=(averagesum)/(stucount*200);
+     average=50;
+        console.log(averagesum);
+        console.log(average);
+        StudentSnapshot.forEach(function (Student) {
+
+            var midterm = Student.data().Midterm1;
+            var final = Student.data().Final;
+            var stuname=Student.data().Name;
+
+            console.log(Student.data().Midterm1);
+            console.log(Student.data().Final);
+            console.log(Student.data().Name);
+
+    window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                theme:"light2",
+                animationEnabled: true,
+
+                title:{
+                    text: "Performance Chart"
+                },
+                axisY: {
+                    title: "Grades",
+                    showInLegend: true,
+                    valueFormatString: "#0,,.",
+                    stripLines: [{
+                        color:"red",
+                        value: average,
+                        label: "Average"
+                    }]
+                },
+                data: [{
+                    yValueFormatString: "##.00",
+                    showInLegend: true,
+
+                    xValueFormatString: "string",
+                    name: stuname,
+                    type: "spline",
+                    dataPoints: [
+                        {x: "Midterm 1", y: midterm},
+                        {x: "Final", y: final},
+
+                    ]
+                }]
+            });
+            chart.render();
+
+        }
+    });
+
+    });
+
+    </script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

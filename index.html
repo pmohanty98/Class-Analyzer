@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<title>ClassAnalyzer</title>
+<head>
+    <script language="javascript" type="text/javascript"></script>
+
+    <!-- Loads the entire Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="first.js"></script>
+<!--    <script src="first.js"></script>-->
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color:#f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 10px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        body {
+            font-family: Almendra Display,sans-serif;font-size: 22px;
+            background-color: deepskyblue;
+        }
+        h1{
+            color: deeppink;
+
+            text-align:center ;
+        }
+        h2{
+            color: lightpink;
+            text-align:center ;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+<h1 >Welcome to Class Analyzer!!!</h1>
+<form onsubmit="return false">
+<b><h2>GTA USERNAME:</h2></b>
+    <div style="text-align:center;">  <input type="text"  id="gta_name" name="gtaname" value="" style="font-size:16pt;" ></div>
+
+<B><h2>PASSWORD:</h2></B>
+    <div style="text-align:center;">  <input type="password"   id="pass"  name="password" value="" style="font-size:16pt;"  ></div>
+
+    <br/>
+<br>
+    <div style="text-align:center;"> <button  class="button" style="vertical-align:middle" value="Go to Next Page" onclick="credentialchecker()"  ><span>SUBMIT </span></button></div>
+</form>
+
+</body>
+</html>
