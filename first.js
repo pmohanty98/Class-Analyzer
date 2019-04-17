@@ -18,7 +18,7 @@ function credentialchecker() {
 
     database.collection("users").get().then(function(usersSnapshot) {
 
-        var arr = [[],[]];
+        var arr = [];
 
         var length=0;
      //   var BreakException = {};
@@ -28,11 +28,13 @@ function credentialchecker() {
                  // console.log(user.id, " => ", user.data());
                  var usr = user.data().username;
                  var passw = user.data().password;
-                 arr[length][0] = usr;
-                 arr[length][1] = passw;
                  console.log(usr);
                  console.log(passw);
                  console.log(length);
+                 arr.push([]);
+                 arr[length][0] = usr;
+                 arr[length][1] = passw;
+
                  console.log(arr[length][0]);
                  console.log(arr[length][1]);
                  length++;
