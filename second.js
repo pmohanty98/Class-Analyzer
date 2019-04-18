@@ -19,11 +19,9 @@ object={};
     object.dataPoints.object2.y=finalscore;
 
 
-    console.log("inside plotdatapoints");
-    console.log(object.valueOf());
+
 
 return object;
-
 
 }
 
@@ -35,23 +33,17 @@ function makearray ( finalarray,object)
 
 function getdata(database)
 {
-    studata = [];
+     var studata = [];
+    var length = 0;
+    var finalarray=[];
+
 
     database.collection("Student").get().then(function(StudentSnapshot) {
 
         var averagesum = 0;
-        var stucount = 0;
 
         StudentSnapshot.forEach(function (Student) {
             averagesum = averagesum + Student.data().Midterm1 + Student.data().Final;
-            stucount++;
-        });
-
-        var average = (averagesum) / (stucount * 2);
-
-        var length = 0;
-
-        StudentSnapshot.forEach(function (Student) {
             var midterm = Student.data().Midterm1;
             var final = Student.data().Final;
             var stuname = Student.data().Name;
@@ -60,35 +52,32 @@ function getdata(database)
             studata[length][0] = stuname;
             studata[length][1] = midterm;
             studata[length][2] = final;
-
             length++;
 
         });
 
+        for(var i=0;i<length;i++)
+            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
+
+
+        var average = (averagesum) / (200 * StudentSnapshot.size);
+
     });
 
-
-
-return studata;
+return finalarray;
 
 }
 
-function plotgraph(studata)
+function plotgraph(finalarray)
 {
 
-    window.onload = function () {
+   window.onload = function () {
 
-        var finalarray=[];
+       console.log("sssß");
+        console.log(finalarray.valueOf());
 
-        for(var i=0;i<length;i++)
-
-        { makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
-        }
-
-        console.log("sssß");
-        console.log(finalarray);
-
-        var chart = new CanvasJS.Chart("chartContainer", {
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
             theme:"light2",
             animationEnabled: true,
             title:{
