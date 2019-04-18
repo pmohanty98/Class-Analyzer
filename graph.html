@@ -20,76 +20,10 @@
 
     </script>
 
-
     <script>
-    database.collection("Student").get().then(function(StudentSnapshot) {
-
-        var averagesum=0;
-        var stucount=0;
-
-    StudentSnapshot.forEach(function (Student) {
-        averagesum= averagesum +Student.data().Midterm1 + Student.data().Final ;
-        stucount++;
-
-    });
-
-     var average=(averagesum)/(stucount*2);
-      var studata=[];
-      var length=0;
-
-
-
-        StudentSnapshot.forEach(function (Student) {
-            var midterm = Student.data().Midterm1;
-            var final = Student.data().Final;
-            var stuname = Student.data().Name;
-
-            studata.push([]);
-            studata[length][0] = stuname;
-            studata[length][1] = midterm;
-            studata[length][2] = final;
-           // console.log(studata[length][2]);
-            length++;
-
-        });
-
-        var finalarray=[];
-
-        for(var i=0;i<length;i++)
-        {
-            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
-        }
-
-
-
-        console.log("sssß");
-
-        console.log(finalarray);
-
-    window.onload = function () {
-            var chart = new CanvasJS.Chart("chartContainer", {
-                theme:"light2",
-                animationEnabled: true,
-                title:{
-                    text: "Performance Chart"
-                },
-                axisY: {
-                    title: "Grades",
-                   // showInLegend: true,
-                   // stripLines: [{
-                      //  color:"red",
-                     //   value: average,
-                      //  label: "Average"
-                   // }]
-                },
-
-                data: [finalarray]
-
-            });
-            chart.render();
-        }
-    });
+        plotgraph(getdata(database));
     </script>
+
 
 </head>
 <body>
