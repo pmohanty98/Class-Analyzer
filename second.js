@@ -18,7 +18,12 @@ object={};
     object.dataPoints.object2.label="Final";
     object.dataPoints.object2.y=finalscore;
 
+
+    console.log("inside plotdatapoints");
+    console.log(object.valueOf());
+
 return object;
+
 
 }
 
@@ -55,16 +60,16 @@ function getdata(database)
             studata[length][0] = stuname;
             studata[length][1] = midterm;
             studata[length][2] = final;
-            // console.log(studata[length][2]);
+
             length++;
 
         });
 
     });
 
-return studata;
 
-console.log(studata.valueOf());
+
+return studata;
 
 }
 
@@ -76,7 +81,8 @@ function plotgraph(studata)
         var finalarray=[];
 
         for(var i=0;i<length;i++)
-        {makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
+
+        { makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
         }
 
         console.log("sssß");
