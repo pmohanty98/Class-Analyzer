@@ -60,7 +60,7 @@ function credentialchecker() {
             if(arr[i][0]==cname && arr[i][1]==sname)
             {
                 alert("Yay!");
-                window.location.href = "https://docs.google.com/document/d/1IVa_auUn0vAn8BSRM0xh--tZRXdsgtGUdF0Een7vBNM/edit";
+                window.location.href = "graph.html";
                 break;
             }
             else if(i==length-1)

@@ -1,5 +1,5 @@
-
-function plotdatapoints(  studentname , midscore, finalscore)
+var average;
+function plotdatapoints(  studentname , mid1score, finalscore,mid2score)
 {
 object={};
 
@@ -11,12 +11,23 @@ object={};
 
 
     object.dataPoints.object1={};
-    object.dataPoints.object1.label="Midterm";
-    object.dataPoints.object1.y=midscore;
+    object.dataPoints.object1.label="Midterm 1";
+    object.dataPoints.object1.y=mid1score;
+
+    object.dataPoints.push(object.dataPoints.object1);
+
+
+    object.dataPoints.object3={};
+    object.dataPoints.object3.label="Midterm 2";
+    object.dataPoints.object3.y=mid2score;
+
+    object.dataPoints.push(object.dataPoints.object3);
 
     object.dataPoints.object2={};
     object.dataPoints.object2.label="Final";
     object.dataPoints.object2.y=finalscore;
+
+    object.dataPoints.push(object.dataPoints.object2);
 
 
 
@@ -43,39 +54,41 @@ function getdata(database)
         var averagesum = 0;
 
         StudentSnapshot.forEach(function (Student) {
-            averagesum = averagesum + Student.data().Midterm1 + Student.data().Final;
-            var midterm = Student.data().Midterm1;
+            averagesum = averagesum + Student.data().Midterm1 + Student.data().Final+Student.data().Midterm2;
+            var midterm1 = Student.data().Midterm1;
             var final = Student.data().Final;
             var stuname = Student.data().Name;
+            var midterm2=Student.data().Midterm2;
 
             studata.push([]);
             studata[length][0] = stuname;
-            studata[length][1] = midterm;
+            studata[length][1] = midterm1;
             studata[length][2] = final;
+            studata[length][3] = midterm2;
             length++;
 
         });
 
         for(var i=0;i<length;i++)
-            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
+            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2],studata[i][3]));
+
+          average = (averagesum) / (3 * StudentSnapshot.size);
+
+         console.log(average);
 
 
-        var average = (averagesum) / (200 * StudentSnapshot.size);
 
     });
 
 return finalarray;
-
 }
 
 function plotgraph(finalarray)
 {
-
+    console.log("plotgraph");
+    console.log(average);
+    average=70.86;
    window.onload = function () {
-
-       console.log("sssß");
-        console.log(finalarray.valueOf());
-
         var chart = new CanvasJS.Chart("chartContainer",
             {
             theme:"light2",
@@ -84,17 +97,21 @@ function plotgraph(finalarray)
                 text: "Performance Chart"
             },
             axisY: {
-                title: "Grades"
-                // showInLegend: true,
-                // stripLines: [{
-                //  color:"red",
-                //   value: average,
-                //  label: "Average"
-                // }]
+                title: "Grades",
+                stripLines:[
+                    {
+                        value: average,
+                        label: "Average",
+                        thickness:3,
+                        labelFontWeight:"bold"
+                    }
+                ]
             },
             data: finalarray
-
         });
         chart.render();
     }
+
+
+
 }
