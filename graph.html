@@ -37,8 +37,9 @@
       var studata=[];
       var length=0;
 
-        StudentSnapshot.forEach(function (Student) {
 
+
+        StudentSnapshot.forEach(function (Student) {
             var midterm = Student.data().Midterm1;
             var final = Student.data().Final;
             var stuname = Student.data().Name;
@@ -47,6 +48,7 @@
             studata[length][0] = stuname;
             studata[length][1] = midterm;
             studata[length][2] = final;
+           // console.log(studata[length][2]);
             length++;
 
         });
@@ -55,10 +57,14 @@
 
         for(var i=0;i<length;i++)
         {
-            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1]),studata[i][2]);
+            makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2]));
         }
 
-        console.log(finalarray.valueOf());
+
+
+        console.log("sssß");
+
+        console.log(finalarray);
 
     window.onload = function () {
             var chart = new CanvasJS.Chart("chartContainer", {
@@ -76,6 +82,7 @@
                       //  label: "Average"
                    // }]
                 },
+
                 data: [finalarray]
 
             });
