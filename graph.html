@@ -18,9 +18,11 @@
     firebase.initializeApp(config);
     database=firebase.firestore();
 
-    </script>
-    <script>
-        plotgraph(getdata(database));
+
+    window.onload = function () {
+
+        getdata(database);
+    }
     </script>
 
 

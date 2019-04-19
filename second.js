@@ -1,4 +1,4 @@
-var average;
+
 function plotdatapoints(  studentname , mid1score, finalscore,mid2score)
 {
 object={};
@@ -29,9 +29,6 @@ object={};
 
     object.dataPoints.push(object.dataPoints.object2);
 
-
-
-
 return object;
 
 }
@@ -42,23 +39,22 @@ function makearray ( finalarray,object)
 }
 
 
-function getdata(database)
+ function getdata(database)
 {
-     var studata = [];
+    var studata = [];
     var length = 0;
     var finalarray=[];
-
+   // await averagesum=0;
 
     database.collection("Student").get().then(function(StudentSnapshot) {
 
-        var averagesum = 0;
-
         StudentSnapshot.forEach(function (Student) {
-            averagesum = averagesum + Student.data().Midterm1 + Student.data().Final+Student.data().Midterm2;
             var midterm1 = Student.data().Midterm1;
             var final = Student.data().Final;
             var stuname = Student.data().Name;
             var midterm2=Student.data().Midterm2;
+
+           // averagesum=averagesum+Student.data().Midterm1 + Student.data().Midterm2+ Student.data().Final;
 
             studata.push([]);
             studata[length][0] = stuname;
@@ -72,23 +68,47 @@ function getdata(database)
         for(var i=0;i<length;i++)
             makearray(finalarray,plotdatapoints(studata[i][0],studata[i][1],studata[i][2],studata[i][3]));
 
-          average = (averagesum) / (3 * StudentSnapshot.size);
-
-         console.log(average);
-
-
 
     });
 
-return finalarray;
+  //  array.second=finalarray;
+  //  console.log("sssss");
+    console.log(finalarray.valueOf());
+  //  console.log(averagesum);
+
+plotgraph(finalarray);
+
 }
+
+
+function calcaverage(finalarray)
+{
+    var averagesum = 0;
+    console.log();
+   // Object.keys(finalarray).length;
+    console.log(Object.keys(finalarray).length);
+
+    for(var i=0;i<finalarray.length;i++)
+    {
+        console.log(finalarray[i].dataPoints.object1.y);
+        console.log(finalarray[i].dataPoints.object2.y);
+        console.log(finalarray[i].dataPoints.object1.y);
+        console.log(finalarray[i].dataPoints.object1.y);
+        averagesum = averagesum + finalarray[i].dataPoints.object1.y + finalarray[i].dataPoints.object2.y +finalarray[i].dataPoints.object3.y;
+    }
+
+    var average = (averagesum) / (3 * finalarray.length);
+    console.log(average);
+
+return average;
+}
+
 
 function plotgraph(finalarray)
 {
-    console.log("plotgraph");
-    console.log(average);
-    average=70.86;
-   window.onload = function () {
+    var average=calcaverage(finalarray);
+
+  // window.onload = function () {
         var chart = new CanvasJS.Chart("chartContainer",
             {
             theme:"light2",
@@ -110,7 +130,7 @@ function plotgraph(finalarray)
             data: finalarray
         });
         chart.render();
-    }
+   // }
 
 
 
