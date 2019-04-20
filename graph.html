@@ -6,6 +6,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
     <script src="second.js"></script>
     <script>
+
     var config = {
     apiKey: "AIzaSyBh0U1gENXIsEjB-gnJgjabaVxBSrFa7Qs",
     authDomain: "database-3d971.firebaseapp.com",
@@ -19,16 +20,21 @@
     database=firebase.firestore();
 
 
-    window.onload = function () {
+    window.onload =  function () {
 
-        getdata(database);
-    }
+  (getdata(database));
+    };
+
+
+
+
     </script>
 
 
 </head>
-<body>
+<body bgcolor="#00bfff" text="#ff1493">
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 </body>
 </html>

@@ -85,7 +85,20 @@ function calcaverage(finalarray) {
 function plotgraph(finalarray) {
 
     console.log(finalarray);
-    var average = calcaverage(finalarray);
+    var average = Math.round(calcaverage(finalarray));
+
+
+
+    console.log(average);
+    console.log("xxx");
+    if(average>=80)
+        alert("Average:"+average+"\n"+"The class is doing pretty well!");
+    else if(average>=70 && average<80)
+        alert("Average:"+average+"\n"+"The class is doing OK!");
+    else if(average>=60 && average<70)
+        alert("Average:"+average+"\n"+"The class is performing satisfactorily!");
+    else if(average>59)
+        alert("Average:"+average+"\n"+"The class is not doing well!");
 
     // window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer",
@@ -109,14 +122,14 @@ function plotgraph(finalarray) {
             toolTip: {
                 shared: "true"
             },
-            legend:{
-                cursor:"pointer",
-                itemclick : toggleDataSeries
+            legend: {
+                cursor: "pointer",
+                itemclick: toggleDataSeries
             },
             data: finalarray
         });
     chart.render();
-    // }
+
 
 
     function toggleDataSeries(e) {
@@ -125,4 +138,5 @@ function plotgraph(finalarray) {
     }
 
 
-}
+
+        }

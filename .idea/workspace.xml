@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="395f65d2-0788-402f-8ece-d94dcf506e36" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph.html" beforeDir="false" afterPath="$PROJECT_DIR$/graph.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second.js" beforeDir="false" afterPath="$PROJECT_DIR$/second.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tester.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="199">
+              <caret line="61" column="19" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+            <state relative-caret-position="221">
+              <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -44,17 +44,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/My Website/public/second.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2218" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state relative-caret-position="504">
+              <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -65,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/second.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+            <state relative-caret-position="296">
+              <caret line="100" column="70" selection-start-line="100" selection-start-column="70" selection-end-line="100" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -97,8 +90,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/first.js" />
         <option value="$PROJECT_DIR$/tester.html" />
-        <option value="$PROJECT_DIR$/graph.html" />
         <option value="$PROJECT_DIR$/firebase.json" />
+        <option value="$PROJECT_DIR$/graph.html" />
         <option value="$PROJECT_DIR$/second.js" />
       </list>
     </option>
@@ -110,8 +103,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
-    <option name="y" value="23" />
+    <option name="x" value="-118" />
+    <option name="y" value="26" />
     <option name="width" value="1440" />
     <option name="height" value="823" />
   </component>
@@ -121,6 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,7 +126,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,11 +178,12 @@
       <workItem from="1555610669855" duration="15416000" />
       <workItem from="1555788712666" duration="706000" />
       <workItem from="1555790045684" duration="222000" />
+      <workItem from="1555790547114" duration="3379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79788000" />
+    <option name="totallyTimeSpent" value="83167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -201,10 +195,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="23" width="1440" height="823" extended-state="0" />
+    <frame x="-118" y="26" width="1440" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22692037" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22692037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -216,7 +210,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.08251748" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.44335663" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,48 +242,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.js" />
     <entry file="file://$PROJECT_DIR$/tester.html" />
-    <entry file="file://$PROJECT_DIR$/public/tester.html">
+    <entry file="file://$PROJECT_DIR$/public/tester.html" />
+    <entry file="file://$PROJECT_DIR$/firebase.json" />
+    <entry file="file://$USER_HOME$/Desktop/My Website/public/second.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/first.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/second.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-2476" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+        <state relative-caret-position="221">
+          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -301,9 +264,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/My Website/public/second.js">
+    <entry file="file://$PROJECT_DIR$/first.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2218" />
+        <state relative-caret-position="199">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/second.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="100" column="70" selection-start-line="100" selection-start-column="70" selection-end-line="100" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
