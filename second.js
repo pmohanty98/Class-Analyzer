@@ -87,10 +87,6 @@ function plotgraph(finalarray) {
     console.log(finalarray);
     var average = Math.round(calcaverage(finalarray));
 
-
-
-    console.log(average);
-    console.log("xxx");
     if(average>=80)
         alert("Average:"+average+"\n"+"The class is doing pretty well!");
     else if(average>=70 && average<80)
