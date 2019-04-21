@@ -84,9 +84,7 @@ function calcaverage(finalarray) {
 
 function plotgraph(finalarray) {
 
-    console.log(finalarray);
     var average = Math.round(calcaverage(finalarray));
-
     if(average>=80)
         alert("Average:"+average+"\n"+"The class is doing pretty well!");
     else if(average>=70 && average<80)
@@ -136,3 +134,14 @@ function plotgraph(finalarray) {
 
 
         }
+function scoreupdation(name,exam)
+{
+
+    var stuname = document.getElementById("stu_name").value;
+
+
+
+
+}
+
+

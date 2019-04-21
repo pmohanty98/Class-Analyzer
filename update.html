@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<title>ClassAnalyzer</title>
+<head>
+    <script language="javascript" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="second.js"></script>
+    <script>
+
+        var config = {
+            apiKey: "AIzaSyBh0U1gENXIsEjB-gnJgjabaVxBSrFa7Qs",
+            authDomain: "database-3d971.firebaseapp.com",
+            databaseURL: "https://database-3d971.firebaseio.com",
+            projectId: "database-3d971",
+            storageBucket: "database-3d971.appspot.com",
+            messagingSenderId: "223031201948"
+        };
+
+        firebase.initializeApp(config);
+        database=firebase.firestore();
+
+
+
+</script>
+    <style>
+        body {
+            font-family: Almendra Display,sans-serif;font-size: 22px;
+            background-color: deepskyblue;
+        }
+        h1{
+            color: deeppink;
+
+            text-align:center ;
+        }
+        h2{
+            color: lightpink;
+            text-align:center ;
+        }
+
+        select{
+            color: deeppink;
+            font-size: 16pt;
+            background: lightpink;
+
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+<h1 >UPDATE SCORES</h1>
+
+<b><h2>ENTER STUDENT NAME:</h2></b>
+<div style="text-align:center;">  <input type="text"  id="stu_name" name="stuname" value="" style="font-size:16pt;" ></div>
+
+<b><h2>SELECT EXAM:</h2></b>
+<div style="text-align:center;"> <select id="box1">
+    <option value="m1" >Midterm 1</option>
+    <option value="7122">Midterm 2</option>
+    <option value="142">Final </option>
+</select>
+</div>
+
+
+
+
+
+</body>
+</html>
