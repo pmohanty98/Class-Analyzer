@@ -60,7 +60,7 @@ function credentialchecker() {
             if(arr[i][0]==cname && arr[i][1]==sname)
             {
                 alert("Yay!");
-                window.location.href = "graph.html";
+                window.location.href = "choice.html";
                 break;
             }
             else if(i==length-1)
