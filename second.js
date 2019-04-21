@@ -134,14 +134,5 @@ function plotgraph(finalarray) {
 
 
         }
-function scoreupdation(name,exam)
-{
-
-    var stuname = document.getElementById("stu_name").value;
-
-
-
-
-}
 
 

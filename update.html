@@ -5,25 +5,47 @@
 <head>
     <script language="javascript" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
-    <script src="second.js"></script>
-    <script>
+    <script src="third.js"></script>
 
-        var config = {
-            apiKey: "AIzaSyBh0U1gENXIsEjB-gnJgjabaVxBSrFa7Qs",
-            authDomain: "database-3d971.firebaseapp.com",
-            databaseURL: "https://database-3d971.firebaseio.com",
-            projectId: "database-3d971",
-            storageBucket: "database-3d971.appspot.com",
-            messagingSenderId: "223031201948"
-        };
-
-        firebase.initializeApp(config);
-        database=firebase.firestore();
-
-
-
-</script>
     <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color:#f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 10px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
         body {
             font-family: Almendra Display,sans-serif;font-size: 22px;
             background-color: deepskyblue;
@@ -61,12 +83,16 @@
 <b><h2>SELECT EXAM:</h2></b>
 <div style="text-align:center;"> <select id="box1">
     <option value="m1" >Midterm 1</option>
-    <option value="7122">Midterm 2</option>
-    <option value="142">Final </option>
+    <option value="m2">Midterm 2</option>
+    <option value="f">Final </option>
 </select>
 </div>
 
+<b><h2>NEW SCORE:</h2></b>
+<div style="text-align:center;">  <input type="text"  id="newscore" name="score" value="" style="font-size:16pt;" ></div>
 
+<br>
+<div style="text-align:center;"> <button  class="button" style="vertical-align:middle" value="Go to Next Page" onclick="scoreupdation()"  ><span>SUBMIT </span></button></div>
 
 
 
