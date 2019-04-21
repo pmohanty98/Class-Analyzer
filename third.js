@@ -27,69 +27,65 @@ function scoreupdation() {
     else if (exam == "f")
         examentry = "Final";
 
-
+    var found=0;
+    var stuID;
     database.collection("Student").get().then(function (StudentSnapshot) {
 
-        var i = 0;
+
+
 
         StudentSnapshot.forEach(  function (Student) {
 
-            var midterm1 = Student.data().Midterm1;
-            var final = Student.data().Final;
             var RETRIEVEDname = Student.data().Name;
-          //  console.log(RETRIEVEDname);
-            var midterm2 = Student.data().Midterm2;
 
-
-            if (stuname != RETRIEVEDname && i == StudentSnapshot.size - 1)
-            {
-              //  alert("NO SUCH STUDENT REGISTERED!!" + "\n" + "TRY AGAIN" + "\n");
+            if (stuname == RETRIEVEDname) {
+                found = 1;
+                stuID = Student.id;
             }
+        });
 
-           if (stuname == RETRIEVEDname) {
-               // console.log("zxx");
-              //  console.log(examentry);
 
-                if (examentry == "Midtrem1") {
+              if(found==1) {
 
-                    console.log(examentry);
+                  console.log(stuID);
+                  console.log(found);
+                  var ref = database.collection("Student").doc(stuID);
+                  console.log(ref);
 
-                    database.collection("Student").doc(stuname).update({
+                  if (examentry == "Midtrem1") {
 
-                        "Midterm1": newscore
-                    }).then(  function () {
-                        console.log("Document successfully updated!");
-                        alert("SUCCESS");
-                    });
+                      ref.update({
+                          "Midterm1": newscore
+                      }).then(function () {
+                          console.log("Document successfully updated!");
+                          alert("SUCCESS");
+                      });
 
-                    console.log("zxx");
+                  } else if (examentry == "Midtrem2") {
 
-                } else if (examentry == "Midtrem2") {
+                      database.collection("Student").doc(stuname).update({
+                          "Midterm2": newscore
+                      }).then(function () {
+                          console.log("Document successfully updated!");
+                          alert("SUCCESS");
+                      });
 
-                    database.collection("Student").doc(stuname).update({
-                        "Midterm2": newscore
-                    }).then(function () {
-                        console.log("Document successfully updated!");
-                        alert("SUCCESS");
-                    });
+                  } else if (examentry == "Final") {
 
-                } else if (examentry == "Final") {
+                      database.collection("Student").doc(stuname).update({
+                          "Final": newscore
+                      }).then(function () {
+                          console.log("Document successfully updated!");
+                          alert("SUCCESS");
+                      });
 
-                    database.collection("Student").doc(stuname).update({
-                        "Final": newscore
-                    }).then(function () {
-                        console.log("Document successfully updated!");
-                        alert("SUCCESS");
-                    });
+                  }
 
-                }
-            }
 
-            i++;
+              }
 
         });
 
-    });
 
 
 }
