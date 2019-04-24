@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="395f65d2-0788-402f-8ece-d94dcf506e36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second.js" beforeDir="false" afterPath="$PROJECT_DIR$/second.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/third.js" beforeDir="false" afterPath="$PROJECT_DIR$/third.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/update.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/third.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="441">
+              <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -91,7 +87,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/update.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
+            <state relative-caret-position="941">
               <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -134,9 +130,9 @@
         <option value="$PROJECT_DIR$/choice.html" />
         <option value="$PROJECT_DIR$/first.js" />
         <option value="$PROJECT_DIR$/second.js" />
-        <option value="$PROJECT_DIR$/third.js" />
         <option value="$PROJECT_DIR$/update.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/third.js" />
       </list>
     </option>
   </component>
@@ -223,12 +219,12 @@
       <workItem from="1555788712666" duration="706000" />
       <workItem from="1555790045684" duration="222000" />
       <workItem from="1555790547114" duration="24846000" />
-      <workItem from="1555945717647" duration="315000" />
+      <workItem from="1555945717647" duration="1005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104949000" />
+    <option name="totallyTimeSpent" value="105639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,7 +251,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32867134" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.46560195" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13636364" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -346,14 +342,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/third.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="441">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
+        <state relative-caret-position="941">
           <caret line="70" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

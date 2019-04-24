@@ -17,11 +17,11 @@ database = firebase.firestore();
 
     var stuname = document.getElementById("stu_name").value;
     var text=document.getElementById("newscore").value;
-    if(text.length()==0)
+    if(text.length==0)
     { pass=1;
-        alert("Enter a valid score.");
+        alert("Enter a valid score.");           //->Null entry
     }
-     if (text.matches("[0-9]+") && (text.length() ==2 || text.length()==1)) {
+     else if (String(text).match("[0-9]+") && (text.length ==2 || text.length==1)) {
           newscore = parseInt(text);
      }
      else{
