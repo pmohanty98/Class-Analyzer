@@ -12,9 +12,24 @@ database = firebase.firestore();
 
 
  function scoreupdation() {
+     var pass=0;
+     var newscore;
 
     var stuname = document.getElementById("stu_name").value;
-    var newscore = parseInt(document.getElementById("newscore").value);
+    var text=document.getElementById("newscore").value;
+    if(text.length()==0)
+    { pass=1;
+        alert("Enter a valid score.");
+    }
+     if (text.matches("[0-9]+") && (text.length() ==2 || text.length()==1)) {
+          newscore = parseInt(text);
+     }
+     else{
+         pass=1;
+         alert("Enter a valid score.");
+     }
+
+
     var sel = document.getElementById('box1');
     var exam = sel.options[sel.selectedIndex].value;
     //  console.log(exam);
@@ -31,7 +46,6 @@ database = firebase.firestore();
     var stuID;
     database.collection("Student").get().then( function (StudentSnapshot) {
 
-
         StudentSnapshot.forEach( function (Student) {
 
             var RETRIEVEDname = Student.data().Name;
@@ -45,7 +59,7 @@ database = firebase.firestore();
         if(found==0)
             alert("NO SUCH STUDENT REGISTERED."+"\n"+"Try Again.");
 
-       else if(found==1 && examentry=="Midterm1") {
+       else if(found==1 && examentry=="Midterm1" && pass==0) {
            var ref = database.collection("Student").doc(stuID);
            console.log(ref);
            ref.update({
@@ -53,7 +67,7 @@ database = firebase.firestore();
            });
             alert("SUCCESS") ;
        }
-        else if(found==1 && examentry=="Midterm2") {
+        else if(found==1 && examentry=="Midterm2" && pass==0) {
             var ref = database.collection("Student").doc(stuID);
             console.log(ref);
             ref.update({
@@ -61,7 +75,7 @@ database = firebase.firestore();
             });
             alert("SUCCESS") ;
         }
-        else if(found==1 && examentry=="Final") {
+        else if(found==1 && examentry=="Final" && pass==0) {
             var ref = database.collection("Student").doc(stuID);
             console.log(ref);
             ref.update({
@@ -71,9 +85,7 @@ database = firebase.firestore();
             alert("SUCCESS") ;
         }
 
-
     });
-
 
   }
 

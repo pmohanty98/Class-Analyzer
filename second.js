@@ -124,14 +124,10 @@ function plotgraph(finalarray) {
         });
     chart.render();
 
-
-
     function toggleDataSeries(e) {
         e.dataSeries.visible = !(typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible);
         chart.render();
     }
-
-
 
         }
 
