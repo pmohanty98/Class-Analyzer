@@ -12,6 +12,7 @@ database = firebase.firestore();
 
 
  function scoreupdation() {
+
      var pass=0;
      var newscore;
 
@@ -21,6 +22,9 @@ database = firebase.firestore();
     { pass=1;
         alert("Enter a valid score.");           //->Null entry
     }
+    else if(text=="100")
+        newscore = parseInt(text);
+
      else if (String(text).match("[0-9]+") && (text.length ==2 || text.length==1)) {
           newscore = parseInt(text);
      }
